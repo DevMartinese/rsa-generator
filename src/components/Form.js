@@ -1,8 +1,6 @@
 import React from "react";
 
-const Form = ({ title, card, setCard, cards, encrypt}) => {
-
-  const { tarjeta } = card;
+const Form = ({ title, card, setCard, cards, setConsultar, setRsa, tarjeta}) => {
 
   const handleChange = (e) => {
     setCard({
@@ -11,12 +9,12 @@ const Form = ({ title, card, setCard, cards, encrypt}) => {
     });
   };
 
-  console.log(tarjeta);
+  // console.log(tarjeta);
 
   const submitCard = (e) => {
     e.preventDefault();
-    const result = encrypt(tarjeta);
-    console.log(result);
+    setRsa(tarjeta);
+    setConsultar(true);
   };
 
   return (
