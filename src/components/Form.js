@@ -4,7 +4,7 @@ const Form = ({ title, card, setCard, cards, setConsultar, setMethod}) => {
 
   const [error, setError] = useState(false);
 
-  const {tarjeta, privatersa} = card;
+  const { tarjeta, privatersa } = card;
 
   const handleChange = (e) => {
     setCard({
@@ -12,8 +12,6 @@ const Form = ({ title, card, setCard, cards, setConsultar, setMethod}) => {
       [e.target.name]: e.target.value,
     });
   };
-
-  // console.log(tarjeta);
 
   const submitCard = (e) => {
     e.preventDefault();
@@ -40,7 +38,7 @@ const Form = ({ title, card, setCard, cards, setConsultar, setMethod}) => {
             </option>
           ))}
         </select>
-        <textarea className="white" placeholder="Inserte su RSA PRIVATE KEY" name="privatersa" value={privatersa} onChange={handleChange} style={{height: 300}}></textarea>
+        <textarea className="white" placeholder="Inserte su RSA PUBLIC KEY" name="privatersa" value={privatersa} onChange={handleChange} style={{height: 300}}></textarea>
         <input
           style={{ cursor: 'pointer' }}
           className="center input-field col s12 waves-effect waves-teal btn-flat green"

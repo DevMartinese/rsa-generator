@@ -79,8 +79,6 @@ function App() {
     }
   }, [consultar, tarjeta, privatersa]);
 
-  // console.log(rsa);
-
   return (
     <>
       <Navbar />
